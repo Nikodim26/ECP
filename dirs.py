@@ -3,7 +3,6 @@ from pathlib import Path
 from functions import definition_limit_certificate, renaming_folder, end, get_name_folder
 import sys
 
-
 exe_path = Path(sys.executable)
 path_dir = exe_path.parent.parent
 # path_dir = Path(r'D:\KVRT\ECP_reserve\Действующие')
@@ -46,5 +45,6 @@ else:
 
     l1 = len(printable_records)
 
-    print(f'\nНайдено {l1} сертификат{end(l1)} с истекающим сроком действия. Всего на учете {Lmax} сертификат{end(Lmax)}.')
+    print(
+        f'\nНайдено {l1} сертификат{end(l1)} с истекающим сроком действия. Всего на учете {Lmax} сертификат{end(Lmax)}.')
 input()

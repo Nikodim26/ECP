@@ -22,7 +22,7 @@ def renaming_folder(name, path_dir, name_folder):
 
     for entry in entries:
         if name_folder == entry:
-            path = Path(path_dir/entry)
+            path = Path(path_dir / entry)
             path.rename(path.with_name(name))
 
 
@@ -54,7 +54,7 @@ def get_name_folder(certificate):
             io_print = ''
             for i in io:
                 io_print = io_print + i[0] + '.'
-            if len(subject_dict.get('CN').split(' '))<=3:
+            if len(subject_dict.get('CN').split(' ')) <= 3:
                 return f'{last_name} {io_print}    ({title})'
             else:
                 return 'обезличенная'
@@ -64,7 +64,3 @@ def get_name_folder(certificate):
 
     except Exception:
         return False
-
-
-
-
